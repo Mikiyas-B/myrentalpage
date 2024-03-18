@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ቤቶችን ይከራዩ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">ቤቶችን ይከራዩ</div>
+        <ul>
+             <li><button><a href="#">እንዴት ላከራይ እችላለሁ</a></button></li>
+            <li><button><a href="#">ወደ  ገጽ ይግቡ</a></button></li>
+            <li><button><a href="#">ተመዝገቢ</a></button></li>
+        </ul>
+    </nav>
+    <form action="/search" method="get">
+        <input type="text" name="keyword" placeholder="Search..." required>
+        
+        <label for="living">ለመኖሪያ ቤት ከተማን ይምረጡ:</label>
+        <select name="living" id="living">
+          <option value="">አዲስ አበባ</option>
+          <option value="apartment">አዳማ</option>
+          <option value="house">ሀዋሳ</option>
+          <option value="condo">ባህር ዳር</option>
+          <option value="condo">አርባምንጭ</option>
+          <option value="condo"ቢሾፍቱ</option>
+          <option value="condo">ጎንደር</option>
+          <option value="condo">ጅጅጋ</option>
+          <option value="condo">ሐረር</option>
+          <option value="condo">ሞጆ</option>
+          <option value="condo">አሰላ</option>
+        </select>
+        
+        <label for="shopping">የቤቱ አይነት:</label>
+        <select name="shopping" id="shopping">
+          <option value="">ማንኛውም</option>
+          <option value="mall">አፓርታማ</option>
+          <option value="market">ቪላ</option>
+          <option value="shopping_center">ኮንዶሚኒየም</option>
+          <option value="market">1 ክፍል</option>
+          <option value="market">2 ክፍል</option>
+          <option value="market">3 ክፍል</option>
+          <option value="market">ሌላ</option>
+        </select>
+        
+        <button type="submit"><button onclick="filterItems()">ፍለጋ</button>
+    </button>
+      </form>
+    <h1>በቀላሉ ይከራዩ. በነፃነት ኑር</h1>
+    <!-- Main Section -->
+    <section class="main-section">
+        <div class="buttons">
+            <button style="height: 50px;width: 150pt;font: 15pt sans-serif;;border: 1px;background-color: rgba(139, 170, 138, 0.884);color: #f3f3f3;border-color: rgb(44, 27, 27);margin: 10pt 100pt;" onclick="showOwnerPage()">ለባለቤቶች</button>
+            <button style="height: 50px;width: 150pt;font: 15pt sans-serif;;border: 1px;background-color: rgba(137, 153, 123, 0.884);color: #f3f3f3;border-color: rgb(44, 27, 27);margin: 10pt 120pt;" onclick="showRenterPage()">ለተከራዮች</button>
+        </div>
+        <h1>በኢትዮጵያ ዙሪያ ይከራዩ</h1>
+        <p>የእኛን ምቹ ፍለጋ በመጠቀም ከ10 በላይ ከተሞች ውስጥ የሚከራዩ ቤቶችን ያግኙ</p>
+        
+        <!-- Gallery -->
+        <div class="gallery">
+            <!-- Each image should be a link to another page -->
+            <div>
+            <a href="addis ababa.html"><img src="h1.jpg" alt="addis ababa"></a>
+            <p>አዲስ አበባ</p>
+              </div>
+            <div>
+            <a  href="adama.html"><img src="adama.jpg" alt="adama"></a>
+            <p>አዳማ</p>
+              </div>
+              <div>
+            <a href="hawasa.html"><img src="hawasa.jpg" alt="hawasa"></a>
+            <
+              <p>ሀዋሳ</p>
+            </div>
+          
+              <div>
+            <a href="dira diwa.html"><img src="dira diwa.jpg" alt="dira diwa"></a>
+            <p>ባህር ዳር</p>
+            
+            </div>
+        <div>
+            <a href="jijiga.html"><img src="jijiga.jpg" alt="jijiga"></a>
+            <p>አርባምንጭ</p>
+            
+            </div>
+        <div>
+            <a href="bahar dar.html"><img src="bahar dar.jpg" alt="bahardar"></a>
+            <p>ቢሾፍቱ</p>
+            </div>
+        <div>
+            <a href="arbaminch.jpg"><img src="arbaminch.jpg" alt="arbaminch"></a>
+            <p>ጎንደር</p>
+            </div>
+            <div>
+                <a href="jijiga.html"><img src="jijiga.jpg" alt="jijiga"></a>
+                <p>ጅጅጋ</p>
+                
+                </div>
+            <div>
+                <a href="bahar dar.html"><img src="bahar dar.jpg" alt="bahardar"></a>
+                <p>ሐረር</p>
+                </div>
+            <div>
+                <a href="arbaminch.jpg"><img src="arbaminch.jpg" alt="arbaminch"></a>
+                <p>ሞጆ</p>
+                </div>
+
+            <!-- Add more images here -->
+        
+    </div>
+    <form action="/search" method="get">
+        <input type="text" name="keyword" placeholder="Search..." required>
+        
+        <label for="living">የንግድ ሱቆች ከተማ ይምረጡ:</label>
+        <select name="living" id="living">
+            <option value="">አዲስ አበባ</option>
+            <option value="apartment">አዳማ</option>
+            <option value="house">ሀዋሳ</option>
+            <option value="condo">ባህር ዳር</option>
+            <option value="condo">አርባምንጭ</option>
+            <option value="condo"ቢሾፍቱ</option>
+            <option value="condo">ጎንደር</option>
+            <option value="condo">ጅጅጋ</option>
+            <option value="condo">ሐረር</option>
+            <option value="condo">ሞጆ</option>
+            <option value="condo">አሰላ</option>
+          </select>
+        
+        <label for="shopping">የሱቅ ዓይነት:</label>
+        <select name="shopping" id="shopping">
+          <option value="">የገበያ አዳራሽ</option>
+          <option value="mall">በአቅራቢያ ያለ የገበያ ማዕከል</option>
+          <option value="market">የመንገድ ላይ ሱቅ</option>
+          <option value="shopping_center">ለካፌ እና ሬስቶራንት</option>
+          <option value="">ለሌሎች ሱቆች</option>
+        </select>
+        
+        <button type="submit">ፍለጋ</button>
+      </form>
+            <div id="results"></div> <!-- Results will be displayed here -->
+        </div>
+      <!-- Gallery -->
+      <div class="gallery">
+        <!-- Each image should be a link to another page -->
+        <div>
+        <a href="addis ababa.html"><img src="h1.jpg" alt="addis ababa"></a>
+        <p>አዲስ አበባ</p>
+          </div>
+        <div>
+        <a  href="adama.html"><img src="adama.jpg" alt="adama"></a>
+        <p>አዳማ</p>
+          </div>
+          <div>
+        <a href="hawasa.html"><img src="hawasa.jpg" alt="hawasa"></a>
+        <
+          <p>ሀዋሳ</p>
+        </div>
+      
+          <div>
+        <a href="dira diwa.html"><img src="dira diwa.jpg" alt="dira diwa"></a>
+        <p>ባህር ዳር</p>
+        
+        </div>
+    <div>
+        <a href="jijiga.html"><img src="jijiga.jpg" alt="jijiga"></a>
+        <p>አርባምንጭ</p>
+        
+        </div>
+    <div>
+        <a href="bahar dar.html"><img src="bahar dar.jpg" alt="bahardar"></a>
+        <p>ቢሾፍቱ</p>
+        </div>
+    <div>
+        <a href="arbaminch.jpg"><img src="arbaminch.jpg" alt="arbaminch"></a>
+        <p>ጎንደር</p>
+        </div>
+        <div>
+            <a href="jijiga.html"><img src="jijiga.jpg" alt="jijiga"></a>
+            <p>ጅጅጋ</p>
+            
+            </div>
+        <div>
+            <a href="bahar dar.html"><img src="bahar dar.jpg" alt="bahardar"></a>
+            <p>ሐረር</p>
+            </div>
+        <div>
+            <a href="arbaminch.jpg"><img src="arbaminch.jpg" alt="arbaminch"></a>
+            <p>ሞጆ</p>
+            </div>
+
+        <!-- Add more images here -->
+    
+</div>
+        
+        <!-- Nearby Homes Section -->
+        <h2> ከታች ያለውን አዝራር ጠቅ በማድረግ በአቅራቢያዎ የሚገኝ የኪራይ ቤት ያግኙ</h2>
+        <button style="height: 50px;width: 150pt;font: 15pt sans-serif;;border: 1px;background-color: rgba(136, 160, 122, 0.884);color: #f3f3f3;border-color: rgb(44, 27, 27);margin: 10pt 130pt;" onclick="openGoogleMaps()">በአቅራቢያ ያለ የኪራይ ቤት</button>
+            <!-- Search Form -->
+            <div> 
+                <form>
+            <label for="location">ከተማ:</label>
+            <select id="location">
+                <option value="city">አዲስ አበባ</option>
+                <option value="sub-city">አዳማ</option>
+                <option value="village">ሀዋሳ</option>
+            </select>
+
+            <label for="location">አካባቢ:</label>
+            <select id="location">
+                <option value="city">ሜክስኮ</option>
+                <option value="sub-city">ሳርቤት</option>
+                <option value="village">ቦሌ</option>
+                <option value="city">ጨርቆስ</option>
+                <option value="sub-city">መገናኛ</option>
+                <option value="village">አየርቴና</option>
+                <option value="village">ጀሞ</option>
+                <option value="village">ገርጅ</option>
+            </select>
+
+        
+            <label for="purpose">ለ:</label>
+            <select id="purpose">
+                <option value="living">የመኖሪያ ቦታ</option>
+                <option value="shopping">የንግድ ሱቅ</option>
+            </select>
+        
+            <label for="type">Type:</label>
+            <select id="type">
+                <option value="apartment">አፓርትመንት</option>
+                <option value="condominium">ኮንዶሚኒየም</option>
+                <option value="villa">ቪላ ቤት</option>
+                <option value="1-room">1 ክፍል</option>
+                <option value="2-room">2 ክፍል</option>
+                <option value="3-room">3 ክፍል</option>
+                <option value="cafe">ካፌ</option>
+                <option value="gym">ጂም</option>
+                <option value="shop">የንግድ ሱቅ</option>
+                <option value="market-center">ሱቅ</option>
+                <option value="electronics-center">የኤሌክትሮኒክስ ማእከል</option>
+                <option value="others">ሌሎች የመኖሪያ ቦታዎች</option>
+                <option value="shop">ሌሎች የንግድ ሱቅ</option>
+            </select>
+        
+            <button onclick="filterItems()">ፍለጋ</button>
+        
+            <div id="filteredItems">
+                <!-- Filtered items will be displayed here -->
+            </div>
+</form>
+        </div>
+        <!-- Collection of Homes -->
+        <div class="collection">
+            <!-- Each home should have an image, description, and contact -->
+            <div class="home">
+                <img src="sh4.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <!-- Add more homes here -->
+            <div class="home">
+                <img src="shooping1.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="shopping3.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="shopping4.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="shooping1.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="dira diwa.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="sh4.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="shopping3.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="gonder.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="adama.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="arbaminch.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="shopping4.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="shooping1.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="gonder.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="arbaminch.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="shopping3.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="harara.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="shopping3.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="bahar dar.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="sh4.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="shooping1.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="adama.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="jijiga.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="gonder.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="adama.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="arbaminch.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="hawasa.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="harara.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="gonder.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="arbaminch.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="h1.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="harara.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="dira diwa.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="bahar dar.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="shopping3.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="dira diwa.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="adama.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="jijiga.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="gonder.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="adama.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="arbaminch.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="hawasa.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="harara.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="gonder.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="arbaminch.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="h1.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="harara.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="dira diwa.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="bahar dar.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="beshofetu.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="dira diwa.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="adama.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="shooping1.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="gonder.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="adama.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="sh4.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="shopping4.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="harara.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="shopping3.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="shooping1.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            <div class="home">
+                <img src="shopping3.jpg" alt="የኪራይ ቤት">
+                <p>የቅንጦት ቤት 3 መኝታ ቤት ያለው ሲሆን በአዲስ አበባ መሃል ላይ: <strong>አዲስ አበባ</strong>, 10,000 birr, </p>
+                <button style="background-color: darkslategrey;font: size: 200px;color: #ffffff;height: 30pt; ;" onclick="contactOwner()">ባለቤቱን ያነጋግሩ</button>
+            </div>
+            
+        </div>
+    
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

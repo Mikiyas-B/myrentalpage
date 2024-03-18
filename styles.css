@@ -1,0 +1,121 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(229, 242, 245);
+}
+
+nav {
+    background-color: #695757;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+form{
+    background-color: rgba(130, 135, 156, 0.884);
+    color:#f3f3f3;
+    height: 20px;width: 100%;
+    padding: 8pt 9pt;
+    font-size: 15pt;
+}
+h1{
+    color: sienna;
+    text-shadow: 2pt;
+    margin: 15pt 200pt;
+}
+p{
+    color: rgba(130, 135, 156, 0.884);
+}
+h2{
+    background-color: lightskyblue;
+    color: darkslategrey;
+    padding: 15pt 20pt;
+}
+
+.logo {
+    font-size: 34px;
+    box-sizing: border-box;
+    box-shadow: #fff;
+    box-decoration-break: clone;
+    
+
+    
+}
+
+nav ul {
+    list-style-type: none;
+    border: #695757;
+    border: 6pt;
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav ul li {
+    display: inline;
+    border: 5px;
+    box-shadow: #f3f3f3;
+    box-sizing: border-box;
+    margin-right: 15px;
+    
+    
+}
+
+nav ul li a {
+    color: #d6cbcb;
+    font-size: 20px;
+    text-decoration: none;
+    border: #f7c4c4;
+    border: 8pt;
+}
+
+main-section {
+    padding: 25px;
+}
+
+button {
+    margin-bottom: 20px;
+    background-color: rgba(139, 170, 138, 0.884);
+    color: white;
+    border: #c03232;
+    border: 4pt;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+.overlay {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-wejj899ight: bold;
+  }
+
+nearby-homes form {
+    margin-bottom: 20px;
+}
+
+.collection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+.home img {
+    width: 100%;
+    height: auto;
+}
